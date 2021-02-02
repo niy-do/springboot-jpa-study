@@ -33,7 +33,7 @@ public class MemberRepositoryTest {
         // then
         Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
         Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
-        
+
         //한 트랜잭션 안에서 조회하는 경우 id 값이 같은 경우 영속성 유지 원칙으로 인해 같은 객체로 확
         Assertions.assertThat(findMember).isEqualTo(member);
     }
